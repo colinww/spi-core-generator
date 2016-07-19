@@ -1,5 +1,11 @@
 /*
- * negedge_sync
+ * Copyright 2013-2016 Colin Weltin-Wu (colinww@gmail.com)
+ * UC San Diego Integrated Signal Processing Group
+ *
+ * Licensed under GNU General Public License 3.0 or later. 
+ * Some rights reserved. See LICENSE.
+ * 
+ * negedge_sync.v
  * Used to synchronize a signal coming from an async domain. Signal is 
  * sampled on the rising edge, but changes only on falling edges. Used
  * for synchronizing control signals that go to rising edge logic. This

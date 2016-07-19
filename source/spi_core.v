@@ -1,4 +1,12 @@
 /*
+ * Copyright 2013-2016 Colin Weltin-Wu (colinww@gmail.com)
+ * UC San Diego Integrated Signal Processing Group
+ *
+ * Licensed under GNU General Public License 3.0 or later. 
+ * Some rights reserved. See LICENSE.
+ * 
+ * spi_core.v
+ * 
  * General SPI interface
  * Services the 4 SPI modes defined as (CPOL,CPHA)
  * See: http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus

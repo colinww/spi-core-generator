@@ -1,4 +1,10 @@
 /*
+ * Copyright 2013-2016 Colin Weltin-Wu (colinww@gmail.com)
+ * UC San Diego Integrated Signal Processing Group
+ *
+ * Licensed under GNU General Public License 3.0 or later. 
+ * Some rights reserved. See LICENSE.
+ * 
  * spi_top.v
  * Top-level module which encompasses the SPI map containing all the
  * control registers, and the digital register test interface.

@@ -1,4 +1,10 @@
 /*
+ * Copyright 2013-2016 Colin Weltin-Wu (colinww@gmail.com)
+ * UC San Diego Integrated Signal Processing Group
+ *
+ * Licensed under GNU General Public License 3.0 or later. 
+ * Some rights reserved. See LICENSE.
+ * 
  * spi_regs.v
  * State machine which handles reading and writing from the test registers.
  * Currently, the test bus width is hardcoded as 37 bits wide, generalize

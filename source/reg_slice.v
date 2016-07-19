@@ -1,5 +1,11 @@
-/*
- * reg_slice
+/* 
+ * Copyright 2013-2016 Colin Weltin-Wu (colinww@gmail.com)
+ * UC San Diego Integrated Signal Processing Group
+ *
+ * Licensed under GNU General Public License 3.0 or later. 
+ * Some rights reserved. See LICENSE.
+ * 
+ * reg_slice.v
  * 
  * General purpose register bank. For correct operation, this block requires
  * a running clock on i_clk at all times.

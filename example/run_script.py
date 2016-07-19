@@ -1,6 +1,12 @@
 """
 Generate the SPI registers and corresponding verilog.
 Tested with python 3.4 as well as 2.7.9
+
+Copyright 2013-2016 Colin Weltin-Wu (colinww@gmail.com)
+UC San Diego Integrated Signal Processing Group
+
+Licensed under GNU General Public License 3.0 or later. 
+Some rights reserved. See LICENSE.
 """
 
 """ VARIABLES

@@ -1,6 +1,12 @@
 """
 Generates the registers and fields of an SPI map, also generates the digital
 registers which are exposed to the test interface.
+
+Copyright 2013-2016 Colin Weltin-Wu (colinww@gmail.com)
+UC San Diego Integrated Signal Processing Group
+
+Licensed under GNU General Public License 3.0 or later. 
+Some rights reserved. See LICENSE.
 """
 
 import csv
