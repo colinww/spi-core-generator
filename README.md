@@ -24,9 +24,9 @@ The generated core also contains a state machine which allows the user to intera
     wire [N-1:] v_wire_foo;
     always @( posedge clk or negedge rstb ) begin : reg_foo
     	if ( !rstb )
-        	v_reg_foo \\<= 0;
+        	v_reg_foo <= 0;
         else
-        	v_reg_foo \\<= v_wire_foo;
+        	v_reg_foo <= v_wire_foo;
     end
 
 should be replaced with the following instantiated module:
@@ -39,14 +39,16 @@ should be replaced with the following instantiated module:
 	     .i_clk			(i_clk),
 	     .i_rstb		(i_rstb),
 	     .i_ena			(ena_reg_foo),
-	     .vi_regs			(v_wire_foo),
-	     .i_step			(reg_foo_step_clk),
-	     .i_rd			    (reg_foo_rd),
-	     .i_wr			    (reg_foo_wr));
+	     .vi_regs		(v_wire_foo),
+	     .i_step		(reg_foo_step_clk),
+	     .i_rd			(reg_foo_rd),
+	     .i_wr			(reg_foo_wr));
 
-There are three special wires: <name>_step_clk, <name>_rd, and <name>_wr. These three signals are handled by the generated SPI core. Through these, the SPI and perform the following operations:
+There are three special wires: <name>_step_clk, <name>_rd, and <name>_wr. These three signals are handled by the generated SPI core. Through these, the SPI can perform the following operations:
 - Freezing the clock to the register
 - Single-stepping the register clock
 - Replacing the register contents with an external value
-- Reading the register contents while clock is running, transparently with respect to register functionality.
+- Reading the register contents while clock is running, transparently with respect to register functionality
+
+A state machine (which requires an external oscillator to run) controls the step_clk/rd/wr signals as well all synchronization with the register clock. The test data is passed along vio_tbus, which can be shared with several reg_slice instances.
 
